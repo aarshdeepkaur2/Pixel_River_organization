@@ -1,20 +1,39 @@
-import "./App.css";
-import Nav from "./components/nav/Nav";
-import Header from "./components/header/Header";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
 import EmployeeList from "./components/employeelist/EmployeeList";
-import Footer from "./components/footer/Footer";
+import OrganizationList from "./components/organization/organizationList";
+import Header from "./components/header/Header";
+import { NotFound } from "./components/Pages/NotFound";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Header />,
+      },
+      {
+        path: "employees",
+        element: <EmployeeList />,
+      },
+      {
+        path: "organization",
+        element: <OrganizationList />,
+      },
+     
+    ],
+  },
+     {
+        path: "*", 
+        element: < NotFound />,
+     }
+    ]);
+ 
 
 function App() {
-  return (
-    
-    <>
-      <Nav />
-      <Header />
-      <EmployeeList />
-      <Footer /> 
-    </>
-  );
-};
-
+  return <RouterProvider router={router} />;
+}
 
 export default App;
