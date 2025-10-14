@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEntryForm } from "../../../hooks/useEntryForm";
 import * as roleRepo from "../../../apis/roleRepo";
-import "./Organization.css";
+import "./organization.css";
 
 export default function OrganizationList() {
   const [roles, setRoles] = useState(roleRepo.getRoles());

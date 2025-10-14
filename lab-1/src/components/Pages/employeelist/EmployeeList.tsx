@@ -1,7 +1,7 @@
 import { useState } from "react";
 import * as employeeRepo from "../../../apis/employeeRepo";
 import { useEntryForm } from "../../../hooks/useEntryForm";
-import "./EmployeeList.css";
+import "./Employeelist.css";
 
 function EmployeeList() {
   const [searchTerm, setSearchTerm] = useState("");
