@@ -1,0 +1,72 @@
+.organization {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(210, 203, 203, 0.1);
+  text-align: left;
+}
+
+.organization input {
+  width: 100%;
+  padding: 0.6em;
+  margin-bottom: 1.2em;
+  border: 1px solid #5a5757;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #d6ebf7;
+  color: #222;
+}
+
+.role {
+  background-color: #d6ebf7;
+  border: 1px solid #5a5757;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.role:hover {
+  background-color: #c2deee;
+  box-shadow: 0 2px 6px rgba(90, 87, 87, 0.15);
+}
+
+.role h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.role .person-name {
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-top: 0.4em;
+}
+
+.role .description {
+  margin-top: 0.7em;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  animation: expand 0.3s ease;
+}
+
+
+.organization p {
+  text-align: center;
+  font-style: italic;
+  color: #444;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.success {
+  color: green;
+  text-align: center;
+  margin-bottom: 1em;
+}
