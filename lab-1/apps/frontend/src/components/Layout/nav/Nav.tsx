@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 export function Nav() {
   return (
@@ -15,6 +16,12 @@ export function Nav() {
         <span> / </span>
         <Link to="/organization">Organization</Link>
       </div>
+       <SignedOut>
+        <SignInButton />
+      </SignedOut>
+      <SignedIn>
+        <UserButton />
+      </SignedIn>
     </nav>
   );
 }

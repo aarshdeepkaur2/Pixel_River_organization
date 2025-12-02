@@ -7,7 +7,6 @@ import { NotFound } from "./src/components/Pages/NotFound";
 
 function App() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path ="/" element= {<Header />} />
@@ -17,7 +16,6 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
   );
 }
 

@@ -7,7 +7,7 @@ import roleRoutes from "./api/v1/routes/roleRoutes";
 import corsOptions from "../config/cors";
 import setupSwagger from "../config/swagger";
 import errorHandler from "./api/v1/middleware/errorHandler";
-
+import { clerkMiddleware } from '@clerk/express'
 // initialize express application
 const app: Express = express();
 
@@ -31,6 +31,7 @@ setupSwagger(app);
 app.get("/",  (_req, res) => {
     res.send("Your backend is working correctly!");
 });
+app.use(clerkMiddleware())
 
 app.use("/api/v1/employees", employeeRoutes);
 app.use("/api/v1/roles", roleRoutes);

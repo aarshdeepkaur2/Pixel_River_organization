@@ -1,4 +1,4 @@
-import notFoundImage from "../../assets/not_found.png";
+import notFoundImage from "../../../assets/not_found.png";
 
 export function NotFound() {
   return (

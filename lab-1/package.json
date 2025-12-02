@@ -1,0 +1,17 @@
+{
+  "name": "Lab-1",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:frontend\" \"npm:backend\"",
+    "frontend": "npm run dev --workspace apps/frontend",
+    "backend": "npm start --workspace apps/backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
